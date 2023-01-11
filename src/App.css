@@ -1,38 +1,268 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Press Start 2P", sans-serif;
+  color: #eee;
+  background-color: #222;
+  height: 120vh;
+  /* background-color: #60b347; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* LAYOUT */
+header {
+  position: relative;
+  height: 35vh;
+  border-bottom: 7px solid #eee;
+}
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.left {
+  width: 52rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.right {
+  width: 52rem;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* ELEMENTS STYLE */
+h1 {
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.between {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.again {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.guess {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+.keyboardContainer {
+  padding: 1rem;
+  width: 50vw;
+  border: 1px solid white;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-areas:
+    "one one two two three three four four five five six six seven seven eight eight nine nine zero zero ."
+    ". q q w w e e r r t t y y u u i i o o p p"
+    ". . a a s s d d f f g g h h j j k k l l ."
+    ". . . z z x x c c v v b b n n m m . . . .";
+}
+
+.key {
+  border: 1px solid white;
+  font-size: 4rem;
+  padding: 1.4rem;
+  transition: 0.2s;
+  justify-self: center;
+}
+
+.key:hover {
+  transition: 0.2s;
+  color: rgb(92, 92, 92);
+  cursor: pointer;
+}
+
+.correctGuess {
+  background-color: green;
+  color: rgb(0, 73, 0);
+}
+
+.wrongGuess {
+  background-color: red;
+  color: rgb(153, 0, 0);
+}
+
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+#six {
+  grid-area: six;
+}
+#seven {
+  grid-area: seven;
+}
+#eight {
+  grid-area: eight;
+}
+#nine {
+  grid-area: nine;
+}
+#zero {
+  grid-area: zero;
+}
+
+#A {
+  grid-area: a;
+}
+#B {
+  grid-area: b;
+}
+#C {
+  grid-area: c;
+}
+#D {
+  grid-area: d;
+}
+#E {
+  grid-area: e;
+}
+#F {
+  grid-area: f;
+}
+#G {
+  grid-area: g;
+}
+#H {
+  grid-area: h;
+}
+#I {
+  grid-area: i;
+}
+#J {
+  grid-area: j;
+}
+#K {
+  grid-area: k;
+}
+#L {
+  grid-area: l;
+}
+#M {
+  grid-area: m;
+}
+#N {
+  grid-area: n;
+}
+#O {
+  grid-area: o;
+}
+#P {
+  grid-area: p;
+}
+#Q {
+  grid-area: q;
+}
+#R {
+  grid-area: r;
+}
+#S {
+  grid-area: s;
+}
+#T {
+  grid-area: t;
+}
+#U {
+  grid-area: u;
+}
+#V {
+  grid-area: v;
+}
+#W {
+  grid-area: w;
+}
+#X {
+  grid-area: x;
+}
+#Y {
+  grid-area: y;
+}
+#Z {
+  grid-area: z;
 }
