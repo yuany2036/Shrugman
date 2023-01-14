@@ -1,12 +1,27 @@
 import { useContext } from "react";
 import AppContext from "../Context/AppContext";
-import Guessing from "./Guessing";
-import Message from "./Message";
+import StartPage from "./StartPage/StartPage";
+import Guessing from "./Guessing/Guessing";
+import Message from "./Message/Message";
+import Header from "./Header/Header";
 
 const Main = () => {
-  const { isGuessing } = useContext(AppContext);
+  const { gameState } = useContext(AppContext);
+  const { status } = gameState;
+  // console.log(gameState);
 
-  return <>{isGuessing ? <Guessing /> : <Message />}</>;
+  return (
+    <>
+      {status.page === "start" && <StartPage />}
+      {
+        <>
+          {status.page !== "start" && <Header />}
+          {status.page === "message" && <Message />}
+          {status.page === "guessing" && <Guessing />}
+        </>
+      }
+    </>
+  );
 };
 
 export default Main;

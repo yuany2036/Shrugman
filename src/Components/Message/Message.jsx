@@ -1,16 +1,17 @@
 import { useContext } from "react";
-import AppContext from "../Context/AppContext";
+import AppContext from "../../Context/AppContext";
 
 const Message = () => {
-  const { gameState, dispatchGameState, setIsGuessing, messages } =
-    useContext(AppContext);
+  const { gameState, dispatchGameState, messages } = useContext(AppContext);
 
   const buttonHandler = (e) => {
-    console.log(e.target.innerText);
+    dispatchGameState({
+      type: "SET_STATUS",
+      payload: { page: "guessing", state: "guessing" },
+    });
     e.target.innerText === "Books"
       ? dispatchGameState({ type: "SET_TITLE", payload: "books" })
       : dispatchGameState({ type: "SET_TITLE", payload: "movies" });
-    setIsGuessing(true);
   };
 
   const welcomeMessage = (
@@ -37,7 +38,7 @@ const Message = () => {
       {Object.keys(gameState.score).length === 1 && messageAfterFirstGame}
       {Object.keys(gameState.score).length > 1 &&
         messages.snarkyComments[
-          Math.floor(Math.random() * gameState.snarkyComments.length)
+          Math.floor(Math.random() * messages.snarkyComments.length)
         ]}
       <p>{gameState.shrug}</p>
       <p>Would you like to guess books or movies?</p>

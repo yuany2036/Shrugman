@@ -1,4 +1,9 @@
+// import { useContext } from "react";
+// import AppContext from "../../Context/AppContext";
+import styles from "./Keyboard.module.scss";
+
 const Keyboard = ({ keyPressHandler }) => {
+  // const { gameState } = useContext(AppContext);
   const letters = [];
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   const numString = [
@@ -18,17 +23,21 @@ const Keyboard = ({ keyPressHandler }) => {
     letters.push(String.fromCharCode(i));
   }
   return (
-    <div className="keyboardContainer" onClick={keyPressHandler}>
+    <div className={styles.keyboardContainer} onClick={keyPressHandler}>
       {numbers.map((num, index) => {
         return (
-          <div className="key" id={numString[index]} key={numString[index]}>
+          <div
+            className="key num active"
+            id={numString[index]}
+            key={numString[index]}
+          >
             {num}
           </div>
         );
       })}
       {letters.map((letter) => {
         return (
-          <div className="key" id={letter} key={letter}>
+          <div className="key active" id={letter} key={letter}>
             {letter}
           </div>
         );

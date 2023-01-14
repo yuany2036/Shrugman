@@ -1,0 +1,147 @@
+.keyboardContainer {
+  padding: 1rem;
+  width: 50vw;
+  border: 1px solid white;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(21, 1fr);
+  grid-template-areas:
+    "one one two two three three four four five five six six seven seven eight eight nine nine zero zero ."
+    ". q q w w e e r r t t y y u u i i o o p p"
+    ". . a a s s d d f f g g h h j j k k l l ."
+    ". . . z z x x c c v v b b n n m m . . . .";
+}
+
+.key {
+  border: 1px solid white;
+  font-size: 4rem;
+  padding: 1.4rem;
+  transition: 0.2s;
+  justify-self: center;
+}
+
+.active:hover {
+  transition: 0.2s;
+  color: rgb(92, 92, 92);
+  cursor: pointer;
+}
+
+.correctGuess {
+  background-color: green;
+  color: rgb(0, 73, 0);
+}
+
+.wrongGuess {
+  background-color: red;
+  color: rgb(153, 0, 0);
+}
+
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+#six {
+  grid-area: six;
+}
+#seven {
+  grid-area: seven;
+}
+#eight {
+  grid-area: eight;
+}
+#nine {
+  grid-area: nine;
+}
+#zero {
+  grid-area: zero;
+}
+
+#A {
+  grid-area: a;
+}
+#B {
+  grid-area: b;
+}
+#C {
+  grid-area: c;
+}
+#D {
+  grid-area: d;
+}
+#E {
+  grid-area: e;
+}
+#F {
+  grid-area: f;
+}
+#G {
+  grid-area: g;
+}
+#H {
+  grid-area: h;
+}
+#I {
+  grid-area: i;
+}
+#J {
+  grid-area: j;
+}
+#K {
+  grid-area: k;
+}
+#L {
+  grid-area: l;
+}
+#M {
+  grid-area: m;
+}
+#N {
+  grid-area: n;
+}
+#O {
+  grid-area: o;
+}
+#P {
+  grid-area: p;
+}
+#Q {
+  grid-area: q;
+}
+#R {
+  grid-area: r;
+}
+#S {
+  grid-area: s;
+}
+#T {
+  grid-area: t;
+}
+#U {
+  grid-area: u;
+}
+#V {
+  grid-area: v;
+}
+#W {
+  grid-area: w;
+}
+#X {
+  grid-area: x;
+}
+#Y {
+  grid-area: y;
+}
+#Z {
+  grid-area: z;
+}
