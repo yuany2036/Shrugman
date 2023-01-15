@@ -14,6 +14,7 @@ export const messages = {
     "You didn't cheat now did you?",
     "I'm sorry, what happened just now? I was busy and must have missed it.",
     "You're on fire! But don't get too confident, I'll be back to extinguish you.",
+    "Don't get cocky kid.",
   ],
   snarkyComments: [
     "I like you. You remind me of me when I was young and stupid.",
