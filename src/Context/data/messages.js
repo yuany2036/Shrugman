@@ -13,6 +13,7 @@ export const messages = {
     "Great work! Because this message is prerecorded, any observations related to your performance are speculation on my part. Please disregard any undeserved compliments.",
     "You didn't cheat now did you?",
     "I'm sorry, what happened just now? I was busy and must have missed it.",
+    "You're on fire! But don't get too confident, I'll be back to extinguish you.",
   ],
   snarkyComments: [
     "I like you. You remind me of me when I was young and stupid.",
@@ -26,5 +27,9 @@ export const messages = {
     "Yes, I am an agent of Satan, but my duties are largely ceremonial.",
     "You seem reasonable. Did you take your meds today?",
     "If the gaming center is currently being bombarded with fireballs, meteorites, or other objects from space, please avoid unsheltered gaming areas wherever a lack of shelter from space-debris does not appear to be a deliberate part of the game.",
+    "I'm not sure what you're trying to accomplish, but I'm pretty sure it's not working.",
+    "I'm not saying you're a failure, but you're definitely not a success.",
+    "You're like a traffic jam, you're always in the way.",
+    "I'm not saying you're a joke, but you're definitely not a punchline.",
   ],
 };

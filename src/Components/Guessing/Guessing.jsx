@@ -2,22 +2,25 @@ import { useContext, useEffect } from "react";
 import Container from "../Container";
 import AppContext from "../../Context/AppContext";
 import Keyboard from "../Keyboard/Keyboard";
+import styles from "./Guessing.module.scss";
 
 const Guessing = () => {
   const { reset, gameState, dispatchGameState, messages } =
     useContext(AppContext);
 
+  console.log(gameState.categoryLengths);
+
   const keyPressFN = (e) => {
     if (
       (e.key.toUpperCase().charCodeAt(0) > 64 &&
-        e.key.toUpperCase().charCodeAt(0) < 90) ||
+        e.key.toUpperCase().charCodeAt(0) < 91) ||
       (e.key.toUpperCase().charCodeAt(0) > 47 &&
         e.key.toUpperCase().charCodeAt(0) < 58)
     ) {
       let target;
       if (
         e.key.toUpperCase().charCodeAt(0) > 64 &&
-        e.key.toUpperCase().charCodeAt(0) < 90
+        e.key.toUpperCase().charCodeAt(0) < 91
       ) {
         target = document.querySelector(`#${e.key.toUpperCase()}`);
       } else {
@@ -34,7 +37,6 @@ const Guessing = () => {
     }
   };
   console.log(gameState.title);
-  // console.log(gameState);
 
   useEffect(() => {
     dispatchGameState({ type: "SET_MASKED_TITLE" });
@@ -74,17 +76,22 @@ const Guessing = () => {
 
   const chances = 10 - gameState.wrongGuesses.length;
 
+  if (gameState.status.state === "won") {
+    const body = document.querySelector("body");
+    body.classList.add("won");
+  }
+
   return (
-    <Container className="gamePageContainer">
-      <p className="maskedTitle">{gameState.wrongGuesses}</p>
-      <p className="maskedTitle">{gameState.maskedTitle}</p>
-      <Container className="bottom">
+    <Container className={styles.gamePageContainer}>
+      <p className={styles.maskedTitle}>{gameState.maskedTitle}</p>
+      <p className={styles.shruggy}>{gameState.wrongGuesses}</p>
+      <Container className={styles.bottom}>
         <Keyboard
           keyPressHandler={
             gameState.status.page === "guessing" ? keyboardFN : undefined
           }
         />
-        <Container className="messageSection">
+        <Container className={styles.messageSection}>
           <p className="message">
             {gameState.status.state === "guessing"
               ? "Start guessing..."
@@ -95,11 +102,11 @@ const Guessing = () => {
           <p className="message">{`Chances left: ${chances}`}</p>
         </Container>
       </Container>
-      <Container>
+      <Container className={styles.gameFinish}>
         {(gameState.status.state === "won" ||
           gameState.status.state === "lost") && (
           <>
-            <p>
+            <p className={styles.message}>
               {gameState.status.state === "won"
                 ? messages.winningMessage[
                     Math.floor(Math.random() * messages.winningMessage.length)
@@ -108,12 +115,14 @@ const Guessing = () => {
                     Math.floor(Math.random() * messages.losingMessage.length)
                   ]}
             </p>
-            <button className="btn" onClick={backButtonHandler}>
-              Back to menu
-            </button>
-            <button className="btn" onClick={anotherButtonHandler}>
-              Another!
-            </button>
+            <Container className={styles.buttons}>
+              <button className="btn" onClick={backButtonHandler}>
+                Back to menu
+              </button>
+              <button className="btn" onClick={anotherButtonHandler}>
+                Another!
+              </button>
+            </Container>
           </>
         )}
       </Container>

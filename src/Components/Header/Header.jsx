@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import AppContext from "../../Context/AppContext";
 import ScoreModal from "../Modals/ScoreModal";
+import styles from "./Header.module.scss";
 
 const Header = () => {
   const { gameState } = useContext(AppContext);
@@ -14,16 +15,16 @@ const Header = () => {
     gameState.category.slice(0, 1).toUpperCase() + gameState.category.slice(1);
 
   return (
-    <header>
-      <h2>Shrugman</h2>
-      <p className="category">
+    <header className={styles.header}>
+      <h2 className={styles.logo}>Shrugman</h2>
+      <p className={styles.category}>
         {(gameState.status.state === "guessing" ||
           gameState.status.state === "won" ||
           gameState.status.state === "lost") &&
           `(${category})`}
       </p>
       {gameState.score.length > 0 && (
-        <button className="btn again" onClick={resultsButtonHandler}>
+        <button className={styles.btn} onClick={resultsButtonHandler}>
           View results
         </button>
       )}

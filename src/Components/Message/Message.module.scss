@@ -1,0 +1,37 @@
+.messageContainer {
+  height: 90vh;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.message {
+  //   color: blue;
+  font-size: 3rem;
+  text-align: center;
+  line-height: 5rem;
+}
+
+.fury {
+  color: red;
+}
+
+.optionsContainers {
+  //   height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}

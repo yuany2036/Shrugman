@@ -1,0 +1,29 @@
+.header {
+  height: 10vh;
+}
+
+.logo {
+}
+
+.category {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 3rem;
+  right: 2rem;
+}
+
+.btn {
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #ccc;
+  }
+}

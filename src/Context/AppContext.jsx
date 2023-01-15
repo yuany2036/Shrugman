@@ -7,6 +7,7 @@ const AppContext = createContext();
 const intitalState = {
   status: { page: "start", state: null }, // For checking what state the game is at
   category: "",
+  categoryLengths: { books: 0, movies: 0, games: 0 },
   title: "",
   maskedTitle: "", // Letters from title converted to underscores
   wrongGuesses: "", // The string that will slowly become shruggy
@@ -42,8 +43,6 @@ const reducerFN = (state, action) => {
           return titleName === title;
         });
         condition = array.length > 0;
-        console.log(array);
-        console.log(condition);
       } while (condition);
 
       return { ...state, title: title, category: payload };
@@ -55,7 +54,8 @@ const reducerFN = (state, action) => {
         if (
           state.title[i] === " " ||
           state.title[i] === "," ||
-          state.title[i] === "'"
+          state.title[i] === "'" ||
+          state.title[i] === ":"
         )
           startMaskedTitle += state.title[i];
         else startMaskedTitle += "_";
@@ -109,18 +109,24 @@ const reducerFN = (state, action) => {
         let allActiveKeys = document.querySelectorAll(".active");
         [...allActiveKeys].map((el) => el.classList.remove("active"));
         if (newWrongGuesses.length === 10) {
-          console.log("lost!");
           return {
             ...state,
+            categoryLengths: {
+              ...state.categoryLengths,
+              [state.category]: state.categoryLengths[state.category] + 1,
+            },
             maskedTitle: state.title,
             wrongGuesses: newWrongGuesses,
             status: { page: "guessing", state: "lost" },
             score: [...state.score, { title: state.title, result: "lost" }],
           };
         } else if (!newMaskedTitle.includes("_")) {
-          console.log("won!");
           return {
             ...state,
+            categoryLengths: {
+              ...state.categoryLengths,
+              [state.category]: state.categoryLengths[state.category] + 1,
+            },
             maskedTitle: newMaskedTitle,
             status: { page: "guessing", state: "won" },
             score: [...state.score, { title: state.title, result: "won" }],
