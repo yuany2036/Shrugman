@@ -34,7 +34,6 @@ const Guessing = () => {
       });
     }
   };
-  console.log(gameState.title);
 
   useEffect(() => {
     dispatchGameState({ type: "SET_MASKED_TITLE" });
@@ -65,7 +64,6 @@ const Guessing = () => {
       !e.target.classList.contains("active")
     )
       return;
-    console.log(e.target);
     dispatchGameState({
       type: "GUESS_INPUT",
       payload: { target: e.target, listenerFN: keyPressFN },

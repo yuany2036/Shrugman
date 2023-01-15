@@ -7,6 +7,8 @@ export const messages = {
     "(Facepalm)",
     "How did you not guess this one?",
     "You bring shame on your family, shame I say!",
+    "Looks like you're not a fan of words, maybe stick to numbers",
+    "I can see you're not a fan of challenges, maybe try an easier game",
   ],
   winningMessage: [
     "You won? What a surprise!",
@@ -15,6 +17,8 @@ export const messages = {
     "I'm sorry, what happened just now? I was busy and must have missed it.",
     "You're on fire! But don't get too confident, I'll be back to extinguish you.",
     "Don't get cocky kid.",
+    "Well done, you've managed to break the game. Bravo.",
+    "I'm not sure if you're guessing or just randomly picking letters",
   ],
   snarkyComments: [
     "I like you. You remind me of me when I was young and stupid.",
