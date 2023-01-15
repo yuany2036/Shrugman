@@ -33,7 +33,7 @@ const Message = () => {
       will cause me to reveal a tiny bit more of myself! And once you see all of
       me, then you'll know that{" "}
       <span className={styles.fury}>THE END IS NEIGH</span>. Anyways, best of
-      luck, enjoy, or something like that,"I don't really care."
+      luck, enjoy, or something like that, I don't really care. (shrugs)
     </p>
   );
 
