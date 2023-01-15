@@ -8,8 +8,6 @@ const Guessing = () => {
   const { reset, gameState, dispatchGameState, messages } =
     useContext(AppContext);
 
-  console.log(gameState.categoryLengths);
-
   const keyPressFN = (e) => {
     if (
       (e.key.toUpperCase().charCodeAt(0) > 64 &&

@@ -4,6 +4,9 @@ import AppContext from "../../Context/AppContext";
 const StartPage = () => {
   const { dispatchGameState } = useContext(AppContext);
 
+  const body = document.querySelector("body");
+  body.classList.remove("won");
+
   const buttonClickHandler = () => {
     dispatchGameState({ type: "SET_STATUS", payload: { page: "message" } });
   };
