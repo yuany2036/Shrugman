@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 // import { useContext } from "react";
 // import AppContext from "./Context/AppContext";
 import Main from "./Components/Main";
