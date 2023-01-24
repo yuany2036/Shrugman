@@ -125,7 +125,7 @@ export const options = {
     "Fuser",
     "Watch Dogs: Legion",
     "Ori and the Will of the Wisps",
-    "Tony Hawk's Pro Skater 1+2",
+    "Tony Hawk's Pro Skater",
     "Half-Life: Alyx",
     "Phasmophobia",
     "Microsoft Flight Simulator",

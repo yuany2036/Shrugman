@@ -21,17 +21,13 @@ const Message = () => {
     });
   };
 
-  // const body = document.querySelector("body");
-
-  // body.style.backgroundColor = "#60b347";
-
   const welcomeMessage = (
     <p>
       Hey there! Welcome to Shrugman, I am Shruggy, the last person you want to
       see when playing this game! The goal of the game is to guess the correct
-      title of either a movie or a book, one letter at a time. Any wrong guesses
-      will cause me to reveal a tiny bit more of myself! And once you see all of
-      me, then you'll know that{" "}
+      title of either a game, movie or book, one letter at a time. Any wrong
+      guesses will cause me to reveal a tiny bit more of myself! And once you
+      see all of me, then you'll know that{" "}
       <span className={styles.fury}>THE END IS NEIGH</span>. Anyways, best of
       luck, enjoy, or something like that, I don't really care. (shrugs)
     </p>

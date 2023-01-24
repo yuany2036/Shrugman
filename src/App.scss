@@ -131,20 +131,6 @@ button.start {
   margin-bottom: 2rem;
 }
 
-.keyboardContainer {
-  padding: 1rem;
-  width: 50vw;
-  border: 1px solid white;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(21, 1fr);
-  grid-template-areas:
-    "one one two two three three four four five five six six seven seven eight eight nine nine zero zero ."
-    ". q q w w e e r r t t y y u u i i o o p p"
-    ". . a a s s d d f f g g h h j j k k l l ."
-    ". . . z z x x c c v v b b n n m m . . . .";
-}
-
 .key {
   border: 1px solid white;
   font-size: 4rem;

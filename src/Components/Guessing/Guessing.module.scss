@@ -10,6 +10,7 @@
   font-size: 6rem;
   letter-spacing: 2rem;
   text-align: center;
+  line-height: 10rem;
 }
 
 .gameFinish {
@@ -46,6 +47,8 @@
 }
 
 .message {
+  width: 80%;
+  line-height: 3rem;
   margin-bottom: 3rem;
   text-align: center;
   font-size: 2rem;
