@@ -79,9 +79,9 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="images/shrugman.gif" width="100%"  alt="Shrugman" />
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Started off as a project from my web development course, where we had to create a hangman-like game where the player had to guess the title of a book or a movie using JavaScript within a Node.js environment, I decided to turn that into a project using React.js so that it can be played on a web page for easier access. You can also check out the original version <a href="">here</a>.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -99,8 +99,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Simply click here
 
 ### Prerequisites
 
