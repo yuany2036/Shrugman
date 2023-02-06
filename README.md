@@ -79,7 +79,7 @@
 
 ## About The Project
 
-<img src="images/shrugman.gif" width="100%"  alt="Shrugman" />
+<img src="README/shrugman.gif" width="100%"  alt="Shrugman" />
 
 Started off as a project from my web development course, where we had to create a hangman-like game where the player had to guess the title of a book or a movie using JavaScript within a Node.js environment, I decided to turn that into a project using React.js so that it can be played on a web page for easier access. You can also check out the original version <a href="">here</a>.
 
