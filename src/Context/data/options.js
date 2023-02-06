@@ -1,5 +1,78 @@
 export const options = {
   movies: [
+    "The Lord of the Rings: The Fellowship of the Ring",
+    "The Lord of the Rings: The Two Towers",
+    "The Lord of the Rings: The Return of the King",
+    "The Aviator",
+    "Million Dollar Baby",
+    "Brokeback Mountain",
+    "The Departed",
+    "No Country for Old Men",
+    "Slumdog Millionaire",
+    "The Hurt Locker",
+    "The Social Network",
+    "The King's Speech",
+    "The Artist",
+    "The Help",
+    "Argo",
+    "12 Years a Slave",
+    "Gravity",
+    "The Grand Budapest Hotel",
+    "Birdman",
+    "The Revenant",
+    "Judas and the Black Messiah",
+    "The United States vs. Billie Holiday",
+    "Mank",
+    "Sound of Metal",
+    "Get Out",
+    "The Big Sick",
+    "The Florida Project",
+    "Lady Bird",
+    "Three Identical Strangers",
+    "BlacKkKlansman",
+    "American Factory",
+    "For Sama",
+    "American Sniper",
+    "The Imitation Game",
+    "The Theory of Everything",
+    "Ex Machina",
+    "Inside Out",
+    "Mad Max: Fury Road",
+    "The Martian",
+    "Room",
+    "Spotlight",
+    "The Big Short",
+    "Hacksaw Ridge",
+    "Manchester by the Sea",
+    "Fences",
+    "Hidden Figures",
+    "Moonlight",
+    "La La Land",
+    "The Shape of Water",
+    "Three Billboards Outside Ebbing, Missouri",
+    "The Post",
+    "Green Book",
+    "Once Upon a Time... in Hollywood",
+    "1917",
+    "Nomadland",
+    "Promising Young Woman",
+    "The Father",
+    "Minari",
+    "The Irishman",
+    "Joker",
+    "The Favourite",
+    "Roma",
+    "Bohemian Rhapsody",
+    "A Star is Born",
+    "Black Panther",
+    "The Lighthouse",
+    "The Souvenir",
+    "The Farewell",
+    "Portrait of a Lady on Fire",
+    "A Beautiful Day in the Neighborhood",
+    "Honeyland",
+    "Pain and Glory",
+    "The Two Popes",
     "The Dark Knight",
     "Braveheart",
     "Crouching Tiger, Hidden Dragon",
@@ -156,3 +229,21 @@ export const options = {
     "Unravel",
   ],
 };
+
+// console.log(options.movies.length);
+
+// const duplicateChecker = (array) => {
+//   const result = {};
+
+//   array.forEach((title) => {
+//     if (result[title]) {
+//       result[title]++;
+//     } else {
+//       result[title] = 1;
+//     }
+//   });
+
+//   return result;
+// };
+
+// console.log(duplicateChecker(options.movies));
