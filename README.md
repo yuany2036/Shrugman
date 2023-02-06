@@ -30,7 +30,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="README/logo.png" alt="Logo" width="300">
   </a>
 
 <h3 align="center">Shrugman</h3>
@@ -87,6 +87,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
+<<<<<<< HEAD
 - [![Next][next.js]][next-url]
 - [![React][react.js]][react-url]
 - [![Vue][vue.js]][vue-url]
@@ -95,6 +96,15 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 - [![Laravel][laravel.com]][laravel-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
 - [![JQuery][jquery.com]][jquery-url]
+=======
+* [![React][React.js]][React-url]
+* [![SASS][Sass-lang.com]][Vue-url]
+* [![Angular][Angular.io]][Angular-url]
+* [![Svelte][Svelte.dev]][Svelte-url]
+* [![Laravel][Laravel.com]][Laravel-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+* [![JQuery][JQuery.com]][JQuery-url]
+>>>>>>> 31bdaa4cc86a906e868861cd5c706496b2eb0d6d
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
