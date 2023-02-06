@@ -88,6 +88,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ### Built With
 
 <<<<<<< HEAD
+
 - [![Next][next.js]][next-url]
 - [![React][react.js]][react-url]
 - [![Vue][vue.js]][vue-url]
@@ -95,16 +96,16 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 - [![Svelte][svelte.dev]][svelte-url]
 - [![Laravel][laravel.com]][laravel-url]
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
-- [![JQuery][jquery.com]][jquery-url]
-=======
-* [![React][React.js]][React-url]
-* [![SASS][Sass-lang.com]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
->>>>>>> 31bdaa4cc86a906e868861cd5c706496b2eb0d6d
+- # [![JQuery][jquery.com]][jquery-url]
+
+* [![React][react.js]][react-url]
+* [![SASS][sass-lang.com]][vue-url]
+* [![Angular][angular.io]][angular-url]
+* [![Svelte][svelte.dev]][svelte-url]
+* [![Laravel][laravel.com]][laravel-url]
+* [![Bootstrap][bootstrap.com]][bootstrap-url]
+* [![JQuery][jquery.com]][jquery-url]
+  > > > > > > > 31bdaa4cc86a906e868861cd5c706496b2eb0d6d
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -139,16 +140,6 @@ This is an example of how to list things you need to use the software and how to
    ```js
    const API_KEY = "ENTER YOUR API";
    ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
