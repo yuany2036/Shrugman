@@ -87,25 +87,11 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-<<<<<<< HEAD
-
-- [![Next][next.js]][next-url]
-- [![React][react.js]][react-url]
-- [![Vue][vue.js]][vue-url]
-- [![Angular][angular.io]][angular-url]
-- [![Svelte][svelte.dev]][svelte-url]
-- [![Laravel][laravel.com]][laravel-url]
-- [![Bootstrap][bootstrap.com]][bootstrap-url]
-- # [![JQuery][jquery.com]][jquery-url]
-
-* [![React][react.js]][react-url]
-* [![SASS][sass-lang.com]][vue-url]
-* [![Angular][angular.io]][angular-url]
-* [![Svelte][svelte.dev]][svelte-url]
-* [![Laravel][laravel.com]][laravel-url]
-* [![Bootstrap][bootstrap.com]][bootstrap-url]
-* [![JQuery][jquery.com]][jquery-url]
-  > > > > > > > 31bdaa4cc86a906e868861cd5c706496b2eb0d6d
+<img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
+<img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
+<img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white" />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
