@@ -56,6 +56,7 @@ const reducerFN = (state, action) => {
           state.title[i] === "," ||
           state.title[i] === "'" ||
           state.title[i] === ":" ||
+          state.title[i] === "." ||
           state.title[i] === "-"
         )
           startMaskedTitle += state.title[i];
