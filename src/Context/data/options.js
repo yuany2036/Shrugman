@@ -121,7 +121,6 @@ export const options = {
     "One Hundred Years of Solitude",
     "The Lord of the Rings",
     "The Iliad",
-    "1984",
     "A Brief History of Time",
     "A Clockwork Orange",
     "A Confederacy of Dunces",
