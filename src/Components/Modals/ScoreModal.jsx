@@ -12,7 +12,7 @@ const ScoreModal = ({ setScoreModalOn, scoreModalOn }) => {
   };
 
   const keyCloseModal = (e) => {
-    console.log(e);
+    // console.log(e);
     if (e.key === "Escape") {
       document.removeEventListener("keydown", keyCloseModal);
       setScoreModalOn(false);
@@ -20,6 +20,8 @@ const ScoreModal = ({ setScoreModalOn, scoreModalOn }) => {
   };
 
   if (scoreModalOn) document.addEventListener("keydown", keyCloseModal);
+
+  console.log(gameState.score);
 
   return (
     <>
