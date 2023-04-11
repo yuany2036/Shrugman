@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import AppContext from "../../Context/AppContext";
-import ScoreModal from "../Modals/ScoreModal";
+import ScoreModal from "../Modals/ScoreModal/ScoreModal";
 import styles from "./Header.module.scss";
 
 const Header = () => {
@@ -30,8 +30,8 @@ const Header = () => {
       )}
       {scoreModalOn && (
         <ScoreModal
-          setScoreModalOn={setScoreModalOn}
           scoreModalOn={scoreModalOn}
+          setScoreModalOn={setScoreModalOn}
         />
       )}
     </header>

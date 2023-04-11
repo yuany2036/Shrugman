@@ -1,12 +1,19 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import Container from "../Container";
 import AppContext from "../../Context/AppContext";
 import Keyboard from "../Keyboard/Keyboard";
+import TitleInfoModal from "../Modals/TitleInfoModal/TitleInfoModal";
 import styles from "./Guessing.module.scss";
 
 const Guessing = () => {
   const { reset, gameState, dispatchGameState, messages } =
     useContext(AppContext);
+
+  const [titleInfoModalOn, setTitleInfoModalOn] = useState(false);
+
+  const titleInfoButtonHandler = () => {
+    setTitleInfoModalOn(true);
+  };
 
   const keyPressFN = (e) => {
     if (
@@ -96,6 +103,17 @@ const Guessing = () => {
               : "You lost!"}
           </p>
           <p className="message">{`Chances left: ${chances}`}</p>
+          {gameState.status.state !== "guessing" && (
+            <button className="btn" onClick={titleInfoButtonHandler}>
+              View title info
+            </button>
+          )}
+          {titleInfoModalOn && (
+            <TitleInfoModal
+              titleInfoModalOn={titleInfoModalOn}
+              setTitleInfoModalOn={setTitleInfoModalOn}
+            />
+          )}
         </Container>
       </Container>
       <Container className={styles.gameFinish}>

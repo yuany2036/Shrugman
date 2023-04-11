@@ -55,9 +55,9 @@ const Message = () => {
           Choose a category below to get started:
         </p>
         <div className={styles.buttonsContainer} onClick={buttonHandler}>
-          <button className="btn">Books</button>
+          {/* <button className="btn">Books</button> */}
           <button className="btn">Movies</button>
-          <button className="btn">Games</button>
+          {/* <button className="btn">Games</button> */}
         </div>
       </Container>
     </Container>

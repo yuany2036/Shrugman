@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 import { useContext } from "react";
-import AppContext from "../../Context/AppContext";
+import AppContext from "../../../Context/AppContext";
 import styles from "./ScoreModal.module.scss";
 
 const ScoreModal = ({ setScoreModalOn, scoreModalOn }) => {

@@ -1,0 +1,54 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  border-radius: 10px;
+  width: 1200px;
+  height: 700px;
+  padding: 4rem;
+  background-color: rgb(17, 17, 17);
+
+  overflow-y: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  padding-bottom: 4rem;
+  line-height: 3.5rem;
+}
+
+.list {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+  line-height: 3rem;
+}
+
+.summary {
+  font-size: 1.6rem;
+  padding: 0 6rem 2rem;
+  line-height: 2.5rem;
+  color: #a5a5a5;
+  //   text-align: justify;
+}
+
+.linkContainer {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.link {
+  font-size: 1.5rem;
+  //   text-decoration: none;
+  color: #eee;
+}

@@ -1,6 +1,6 @@
 import { createContext, useReducer } from "react";
 import { messages } from "./data/messages";
-import { options } from "./data/options";
+import { options } from "./data/options_new";
 
 const AppContext = createContext();
 
@@ -39,8 +39,8 @@ const reducerFN = (state, action) => {
         title =
           options[payload][Math.floor(Math.random() * options[payload].length)];
         const array = state.score.filter(({ title: titleName }) => {
-          console.log("titles", titleName, title);
-          return titleName === title;
+          // console.log("titles", titleName, title);
+          return titleName === title.title;
         });
         condition = array.length > 0;
       } while (condition);
@@ -50,17 +50,17 @@ const reducerFN = (state, action) => {
     // ! Creating masked title
     case "SET_MASKED_TITLE":
       let startMaskedTitle = "";
-      for (let i = 0; i < state.title.length; i++) {
+      for (let i = 0; i < state.title.title.length; i++) {
         if (
-          state.title[i] === " " ||
-          state.title[i] === "," ||
-          state.title[i] === "'" ||
-          state.title[i] === ":" ||
-          state.title[i] === "." ||
-          state.title[i] === "?" ||
-          state.title[i] === "-"
+          state.title.title[i] === " " ||
+          state.title.title[i] === "," ||
+          state.title.title[i] === "'" ||
+          state.title.title[i] === ":" ||
+          state.title.title[i] === "." ||
+          state.title.title[i] === "?" ||
+          state.title.title[i] === "-"
         )
-          startMaskedTitle += state.title[i];
+          startMaskedTitle += state.title.title[i];
         else startMaskedTitle += "_";
       }
       return { ...state, maskedTitle: startMaskedTitle };
@@ -74,7 +74,7 @@ const reducerFN = (state, action) => {
       }
 
       // Checking if letter is in title
-      const correct = state.title
+      const correct = state.title.title
         .toLowerCase()
         .includes(target.textContent.toLowerCase());
 
@@ -90,11 +90,12 @@ const reducerFN = (state, action) => {
       if (correct) {
         for (let i = 0; i < state.maskedTitle.length; i++) {
           if (
-            state.title[i].toLowerCase() === target.textContent.toLowerCase()
+            state.title.title[i].toLowerCase() ===
+            target.textContent.toLowerCase()
           ) {
             newMaskedTitle =
               newMaskedTitle.slice(0, i) +
-              state.title[i] +
+              state.title.title[i] +
               newMaskedTitle.slice(i + 1);
           }
         }
@@ -118,10 +119,13 @@ const reducerFN = (state, action) => {
               ...state.categoryLengths,
               [state.category]: state.categoryLengths[state.category] + 1,
             },
-            maskedTitle: state.title,
+            maskedTitle: state.title.title,
             wrongGuesses: newWrongGuesses,
             status: { page: "guessing", state: "lost" },
-            score: [...state.score, { title: state.title, result: "lost" }],
+            score: [
+              ...state.score,
+              { title: state.title.title, result: "lost" },
+            ],
           };
         } else if (!newMaskedTitle.includes("_")) {
           return {
@@ -132,7 +136,10 @@ const reducerFN = (state, action) => {
             },
             maskedTitle: newMaskedTitle,
             status: { page: "guessing", state: "won" },
-            score: [...state.score, { title: state.title, result: "won" }],
+            score: [
+              ...state.score,
+              { title: state.title.title, result: "won" },
+            ],
           };
         }
       }
